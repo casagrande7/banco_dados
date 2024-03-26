@@ -15,7 +15,7 @@ primary key (id)
 
 create table professores (
 id int not null auto_increment,
-nome varchar(45) not null,
+nome varchar(45),
 especialidade varchar(45) not null,
 grau_academico varchar(45) not null,
 primary key(id)
@@ -75,7 +75,7 @@ select id, nome, dt_nascimento, endereco , rm from alunos a;
 insert into professores (nome, especialidade, grau_academico) values ('Michel', 'Matemática', 'Mestrado');
 insert into professores (nome, especialidade, grau_academico) values ('Anderson', 'Geografia', 'Mestrado');
 insert into professores (nome, especialidade, grau_academico) values ('Raquel', 'Língua Portuguesa', 'Mestrado');
-insert into professores (nome, especialidade, grau_academico) values ('Antônio', 'Biologia', 'Mestrado');
+insert into professores (especialidade, grau_academico) values ('Biologia', 'Mestrado');
 insert into professores (nome, especialidade, grau_academico) values ('Léo', 'Educação Física', 'Doutorado');
 
 select id, nome, especialidade, grau_academico from professores p;
@@ -233,7 +233,7 @@ where p.grau_academico = 'Mestrado';
 Escreva uma consulta SQL que retorne o nome das disciplinas sem professores atribuídos)*/
 
 select d.id, d.nome , d.professores_id, p.nome, p.id  from  disciplinas d left join professores p on d.professores_id  = p.id
-where isnull(d.professores_id); 
+where isnull(p.nome); 
 
 
 
