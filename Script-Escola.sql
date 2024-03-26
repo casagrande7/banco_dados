@@ -211,7 +211,7 @@ where isnull(n.notas);
 especializados em uma determinada área, como "Geografia". Escreva uma consulta SQL que retorne o nome dos alunos matriculados 
 nessas disciplinas).*/
 
-select a.id, a.nome, ad.disciplina_id, d.nome, p.nome  from alunos a 
+select a.id, a.nome, ad.disciplina_id, p.especialidade , p.nome  from alunos a 
 inner join alunos_disciplinas ad on ad.alunos_id = a.id 
 inner join disciplinas d on ad.disciplina_id = d.id 
 inner join professores p on p.id = d.professores_id 
@@ -222,7 +222,7 @@ where p.especialidade = 'Geografia';
 de planejamento acadêmico deseja identificar os alunos matriculados em disciplinas ministradas por professores que possuem doutorado.
 Escreva uma consulta SQL que retorne o nome dos alunos matriculados nessas disciplinas)*/
 
-select a.id, a.nome, ad.disciplina_id, d.nome, p.nome  from alunos a 
+select a.id, a.nome, ad.disciplina_id, d.nome, p.nome, p.grau_academico  from alunos a 
 inner join alunos_disciplinas ad on ad.alunos_id = a.id 
 inner join disciplinas d on ad.disciplina_id = d.id 
 inner join professores p on p.id = d.professores_id 
@@ -232,7 +232,7 @@ where p.grau_academico = 'Mestrado';
 (Para otimizar a alocação de recursos, é necessário identificar quais disciplinas ainda não têm professores atribuídos.
 Escreva uma consulta SQL que retorne o nome das disciplinas sem professores atribuídos)*/
 
-select d.id, d.nome , d.professores_id, p.nome  from  disciplinas d left join professores p on d.id = p.id
+select d.id, d.nome , d.professores_id, p.nome, p.id  from  disciplinas d left join professores p on d.professores_id  = p.id
 where isnull(d.professores_id); 
 
 
