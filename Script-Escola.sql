@@ -165,6 +165,7 @@ insert into notas (disciplinas_id, alunos_id, notas) values (3, 1, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (3, 2, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (4, 1, 7);
 insert into notas (disciplinas_id, alunos_id, notas) values (4, 2, 7);
+insert into notas (disciplinas_id, alunos_id, notas) values (4, 3, 6);
 insert into notas (disciplinas_id, alunos_id, notas) values (5, 1, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (5, 2, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 1, 9);
@@ -224,7 +225,7 @@ inner join alunos a on n.alunos_id = a.id where n.notas >= 7;
 (por exemplo, com código de disciplina 'MAT101' e nota superior a 7)*/
 
 select n.id, n.alunos_id, a.nome ,n.disciplinas_id, d.nome , n.notas from notas n inner join disciplinas d on n.disciplinas_id = d.id
-inner join alunos a on n.alunos_id = a.id where n.notas >= 7 and d.nome = 'Língua Portguesa';
+inner join alunos a on n.alunos_id = a.id where n.notas >= 7 and d.nome = 'Língua Portuguesa';
 
 /* 7. Selecionar alunos que têm notas superiores a um determinado valor em uma  disciplina específica 
 (por exemplo, com código de disciplina 'MAT101' e nota superior a 7).*/
@@ -339,9 +340,11 @@ inner join alunos a on n.alunos_id = a.id
 group by n.disciplinas_id, n.alunos_id having avg(n.notas) 
 order by nota_final desc limit 10;
 
-/*  Conte quantos alunos ativos tem cadastrado na escola. Para saber se o aluno esta ativo ele deve estar matriculado em alguma 
+/* 30. Conte quantos alunos ativos tem cadastrado na escola. Para saber se o aluno esta ativo ele deve estar matriculado em alguma 
 disciplina caso o aluno não esteja matricula em uma disciplina ele é considerado inativo.
 */
+select count(alunos_id) as quatidade_Alunos from alunos_disciplinas ad where disciplina_id  is not null
+having count(alunos_id);
 
 
 
