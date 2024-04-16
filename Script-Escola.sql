@@ -135,6 +135,26 @@ insert into notas (disciplinas_id, alunos_id, notas) values (1, 17, 9.5);
 insert into notas (disciplinas_id, alunos_id, notas) values (1, 18, 9.5);
 insert into notas (disciplinas_id, alunos_id, notas) values (1, 19, 9.5);
 insert into notas (disciplinas_id, alunos_id, notas) values (1, 20, 9.5);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 1, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 2, 7);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 3, 10);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 4, 4);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 5, 1);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 6, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 7, 6);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 8, 7);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 9, 3);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 10, 2);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 11, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 12, 3);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 13, 5);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 14, 6);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 15, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 16, 4);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 17, 6);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 18, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 19, 7);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 20, 8);
 insert into notas (disciplinas_id, alunos_id, notas) values (2, 1, 8);
 insert into notas (disciplinas_id, alunos_id, notas) values (2, 2, 8);
 insert into notas (disciplinas_id, alunos_id, notas) values (2, 3, 5);
@@ -150,28 +170,6 @@ insert into notas (disciplinas_id, alunos_id, notas) values (5, 2, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 1, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 2, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 3, 10);
-insert into notas (disciplinas_id, alunos_id, notas) values (7, 1, 10);
-insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 1, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 2, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 3, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 4, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 5, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 6, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 7, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 8, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 9, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 10, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 11, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 12, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 13, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 14, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 15, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 16, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 17, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 18, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 19, 9);
-insert into notas (disciplinas_id, alunos_id, notas) values (1, 20, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 3, 8);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 4, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 5, 7);
@@ -179,6 +177,8 @@ insert into notas (disciplinas_id, alunos_id, notas) values (6, 6, 8);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 7, 10);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 8, 5);
 insert into notas (disciplinas_id, alunos_id, notas) values (6, 9, 3);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 1, 10);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 10);
 insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 5);
 insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 8);
@@ -244,8 +244,6 @@ select a.id, a.nome, a.dt_nascimento, a.endereco , a.rm from alunos a where a.dt
 /* 10. Selecionar disciplinas que não têm notas registradas (Para garantir que todos os alunos tenham suas notas registradas, 
 é necessário identificar as disciplinas em que as notas ainda não foram registradas. Escreva uma consulta SQL que retorne o nome 
 das disciplinas sem notas registradas)*/
-
-delete from notas where notas = 9;
 
 select d.id ,d.nome, d.professores_id, n.disciplinas_id, n.notas from disciplinas d left join notas n on d.id = n.disciplinas_id 
 where isnull(n.notas);
@@ -335,9 +333,17 @@ select a.nome, AVG(n.notas) from notas n inner join disciplinas d on n.disciplin
 where d.nome = 'Química' group by n.alunos_id  having avg(n.notas) order by n.notas desc limit 3;
 
 -- 29. Liste as 10 maiores médias, exibir nome da disciplina, nome do aluno e a média. Obs. Deve considerar todas as disciplinas. 
-select a.nome, d.nome,  AVG(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id 
+select a.nome, d.nome,  AVG(n.notas) as nota_final from notas n 
+inner join disciplinas d on n.disciplinas_id = d.id 
 inner join alunos a on n.alunos_id = a.id 
-group by n.disciplinas_id, n.alunos_id having avg(n.notas) order by n.notas desc limit 10;
+group by n.disciplinas_id, n.alunos_id having avg(n.notas) 
+order by nota_final desc limit 10;
+
+/*  Conte quantos alunos ativos tem cadastrado na escola. Para saber se o aluno esta ativo ele deve estar matriculado em alguma 
+disciplina caso o aluno não esteja matricula em uma disciplina ele é considerado inativo.
+*/
+
+
 
 
 
