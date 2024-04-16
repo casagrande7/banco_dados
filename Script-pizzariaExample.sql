@@ -192,6 +192,31 @@ select *from pizza order by valor desc limit 3;
 - /* Funções de agregações
 * AVG(coluna) Média dos valores da coluna
 * count(coluna) conta o número de linhas
-* Max(coluna) retorna o amior valor da coluna
+* Max(coluna) retorna o maior valor da coluna
 * Min(coluna) retorna o menor valor da coluna 
+* Sum(coluna) Soma dos valores da coluna
 */
+
+-- Qual é a média dos valores das pizzas
+select avg(valor) as preco_medio from pizza;
+select avg(valor) as preco_medio from pizza p where nome like '%esa';
+
+-- Quantos sabores de pizzas temos cadastrados?
+select count(nome) as qtde from pizza p; -- Considera valores nulos
+select count(valor) as qtde from pizza p; -- Não considera valores nulos
+
+-- Qual pizza mais cara
+select max(valor) as maior_valor from pizza p;
+select * from pizza order by valor desc limit 1;
+
+-- Qual a pizza mais barata
+select min(valor) as menor_valor from pizza p;
+
+select sum(valor) as soma from pizza p;
+
+select sum(valor) as total from item_pedido where pedido_id = 7;
+
+select sum(quantidade * valor) from item_pedido where pedido_id = 7;
+
+select c.cliente_id, c.nome, count(p.pedido_id) as qtde_pedido from pedido p inner join cliente c on p.cliente_id = c.cliente_id
+group by c.cliente_id, c.nome;
