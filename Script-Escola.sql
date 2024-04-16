@@ -76,7 +76,9 @@ insert into professores (nome, especialidade, grau_academico) values ('Michel', 
 insert into professores (nome, especialidade, grau_academico) values ('Anderson', 'Geografia', 'Mestrado');
 insert into professores (nome, especialidade, grau_academico) values ('Raquel', 'Língua Portuguesa', 'Mestrado');
 insert into professores (especialidade, grau_academico) values ('Biologia', 'Mestrado');
-insert into professores (nome, especialidade, grau_academico) values ('Léo', 'Educação Física', 'Doutorado');
+insert into professores (nome, especialidade, grau_academico) values ('Fabiano', 'História', 'Mestrado');
+insert into professores (nome, especialidade, grau_academico) values ('Ana Márcia', 'Química', 'Mestrado');
+
 
 select id, nome, especialidade, grau_academico from professores p;
 
@@ -84,11 +86,11 @@ select id, nome, especialidade, grau_academico from professores p;
 insert into disciplinas (nome, professores_id) values ('Matemática', 1);
 insert into disciplinas (nome, professores_id) values ('Física', 1);
 insert into disciplinas (nome, professores_id) values ('Geografia', 2);
-insert into disciplinas (nome, professores_id) values ('Língua Portguesa', 3);
+insert into disciplinas (nome, professores_id) values ('Língua Portuguesa', 3);
 insert into disciplinas (nome, professores_id) values ('Biologia', 4);
-insert into disciplinas (nome, professores_id) values ('Educação Física', 5);
+insert into disciplinas (nome, professores_id) values ('História', 5);
+insert into disciplinas (nome, professores_id) values ('Química', 6);
 
-delete from disciplinas where professores_id = 5; 
 
 select id, nome, professores_id from disciplinas d;
 
@@ -145,6 +147,48 @@ insert into notas (disciplinas_id, alunos_id, notas) values (4, 1, 7);
 insert into notas (disciplinas_id, alunos_id, notas) values (4, 2, 7);
 insert into notas (disciplinas_id, alunos_id, notas) values (5, 1, 9);
 insert into notas (disciplinas_id, alunos_id, notas) values (5, 2, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 1, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 2, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 3, 10);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 1, 10);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 1, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 2, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 3, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 4, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 5, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 6, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 7, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 8, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 9, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 10, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 11, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 12, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 13, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 14, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 15, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 16, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 17, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 18, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 19, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (1, 20, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 3, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 4, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 5, 7);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 6, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 7, 10);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 8, 5);
+insert into notas (disciplinas_id, alunos_id, notas) values (6, 9, 3);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 10);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 5);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 2, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 1, 9);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 1, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 1, 6);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 3, 8);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 3, 7);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 3, 4);
+insert into notas (disciplinas_id, alunos_id, notas) values (7, 3, 10);
 
 
 select n.id, n.alunos_id, a.nome ,n.disciplinas_id, d.nome , n.notas from notas n inner join disciplinas d on n.disciplinas_id = d.id
@@ -234,6 +278,73 @@ Escreva uma consulta SQL que retorne o nome das disciplinas sem professores atri
 
 select d.id, d.nome , d.professores_id, p.nome, p.id  from  disciplinas d left join professores p on d.professores_id  = p.id
 where isnull(p.nome); 
+
+
+-- 14. Calcule o número total de alunos matriculados na disciplina de Matemática Avançada. 
+select count(ad.alunos_id) from alunos_disciplinas ad where ad.disciplina_id = 1;
+
+select count(ad.alunos_id) from alunos_disciplinas ad inner join disciplinas d on ad.disciplina_id = d.id 
+where d.nome = 'Matemática';
+
+-- 15. Determine a soma total das notas dos alunos na disciplina de Física. 
+select sum(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id where d.nome = 'Física';
+
+-- 16. Encontre a maior nota alcançada por um aluno na disciplina de História.
+select max(n.notas)  from notas n inner join disciplinas d on n.disciplinas_id = d.id where d.nome = 'História';
+
+-- 17. Descubra a menor nota obtida por um aluno na disciplina de Química. 
+select min(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id where d.nome = 'Química';
+
+-- 18. Calcule a média das notas dos alunos na disciplina de Biologia. 
+select AVG(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id where d.nome = 'Biologia';
+
+-- 19. Conte quantos alunos estão matriculados em cada disciplina.
+select  d.nome, count(ad.alunos_id) from alunos_disciplinas ad inner join disciplinas d on ad.disciplina_id = d.id 
+group by d.nome;
+
+-- 20. Calcule a soma total das notas de todos os alunos em todas as disciplinas.
+select sum(n.notas) from notas n;
+
+-- 21. Determine a maior nota entre todos os alunos em todas as disciplinas. 
+select max(n.notas) from notas n;
+
+-- 22. Descubra a menor nota entre todos os alunos em todas as disciplinas. 
+select min(n.notas) from notas n;
+
+-- 23. Calcule a média das notas de todos os alunos em todas as disciplinas.
+select AVG(n.notas) from notas n;
+
+-- 24. Liste todas as disciplinas e a média das notas de cada disciplina. 
+select d.nome, AVG(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id 
+group by d.nome;
+
+-- 25. Liste a disciplinas, alunos e a média, realize a ordenação de disciplina e aluno por ordem crescente.
+select d.nome, a.nome, AVG(n.notas)from notas n inner join disciplinas d on n.disciplinas_id = d.id inner join alunos a on n.alunos_id = a.id 
+group by n.disciplinas_id, n.alunos_id having avg(n.notas) order by d.nome, a.nome  asc;
+
+-- 26. Liste a disciplinas, alunos e a média, realize a ordenação de disciplina por ordem crescente e a média em ordem decrescente. 
+select d.nome, a.nome, AVG(n.notas)from notas n inner join disciplinas d on n.disciplinas_id = d.id inner join alunos a on n.alunos_id = a.id 
+group by n.disciplinas_id, n.alunos_id having avg(n.notas) order by d.nome asc, n.notas desc;
+
+-- 27. Liste as 5 menores notas da disciplina de História, exibir o nome do aluno e a nota. 
+select d.nome, n.notas  from notas n inner join disciplinas d on n.disciplinas_id = d.id where d.nome = 'História'
+order by d.nome, n.notas asc limit 5;
+
+-- 28. Liste as 3 maiores médias da disciplina de Química, exibir o nome do aluno e a média. 
+select a.nome, AVG(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id inner join alunos a on n.alunos_id = a.id 
+where d.nome = 'Química' group by n.alunos_id  having avg(n.notas) order by n.notas desc limit 3;
+
+-- 29. Liste as 10 maiores médias, exibir nome da disciplina, nome do aluno e a média. Obs. Deve considerar todas as disciplinas. 
+select a.nome, d.nome,  AVG(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id 
+inner join alunos a on n.alunos_id = a.id 
+group by n.disciplinas_id, n.alunos_id having avg(n.notas) order by n.notas desc limit 10;
+
+
+
+
+
+
+
 
 
 
