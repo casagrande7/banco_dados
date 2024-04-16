@@ -6,6 +6,7 @@ drop database if exists pizzaria;
 
 create database pizzaria;
 
+
 use pizzaria;
 
 create table cliente (
@@ -154,3 +155,43 @@ select * from pizza where valor between 17 and 20;
 select * from pizza where valor < 17 or valor > 20;
 select * from pizza where not (valor >= 17 and valor <= 20);
 select * from pizza where valor not between 17 and 20;
+
+-- Selecionar todas as pizzas co valores iguais a R$ 15,00 e R$ 20,00
+
+select * from pizza where valor = 20 or valor = 15;
+select *from pizza where valor in(15,20);
+
+-- Selecionar todas as pizzas com valores diferentes de R$ 15,00 e R$ 20,00
+select * from pizza where valor != 15 and valor != 20;
+select * from pizza where valor <>15 and valor <>20;
+select *from pizza where valor not in (15,20);
+
+-- Selecionar todas as pizzas com valores nulos
+select *from pizza where valor <=> null;
+select *from pizza where valor is null;
+
+-- Selecionar todos as pizzas com valores diferentes de nulo
+select *from pizza where valor is not null;
+
+-- Selecionar todas as pizzas que começam com a letra E
+select *from pizza where nome like 'e%';
+
+-- Selecionar todas as pizzas que terminam com a letra A
+select *from pizza where nome like '%a';
+
+-- Selecionar todas as pizzas qe terminam com a letra RO
+select *from pizza p where nome like '%ro%';
+
+-- ordenar coluna
+-- desc and asc => Decrescente e Crescente
+select *from pizza order by valor desc;
+
+-- Selecionar as3 pizzas mais caras
+select *from pizza order by valor desc limit 3;
+
+- /* Funções de agregações
+* AVG(coluna) Média dos valores da coluna
+* count(coluna) conta o número de linhas
+* Max(coluna) retorna o amior valor da coluna
+* Min(coluna) retorna o menor valor da coluna 
+*/
