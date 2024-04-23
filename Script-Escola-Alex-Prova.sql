@@ -95,11 +95,12 @@ insert into disciplinas (nome, id_professor) values
 ('Matemática Avançada', 4),
 ('Biologia', 5),
 ('Química', 6);
-insert into disciplinas (nome) values ('Teste');
 
 -- Insedir matricula
 insert into matriculas (ano, id_aluno, id_disciplina)
 select year(now()), id_aluno, id_disciplina from alunos a cross join disciplinas d ;
+
+insert into disciplinas (nome) values ('Teste');
 
 INSERT INTO escola.notas (id_aluno,id_disciplina,nota) VALUES
 	 (1,1,9.24),
@@ -449,7 +450,7 @@ select AVG(n.nota) as media, d.nome as disciplina from notas n inner join discip
 where d.nome = 'Biologia';
 
 -- Exercício 19
-select count(d.id_disciplina) as alunos from matriculas m inner join disciplinas d on m.id_disciplina = d.id_disciplina 
+select  d.nome as disciplina, count(m.id_aluno) as alunos from disciplinas d left join matriculas m on d.id_disciplina = m.id_disciplina 
 group by d.nome;
 
 -- Exercício 20
