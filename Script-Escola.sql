@@ -1,8 +1,8 @@
-drop database if exists escola;
+drop database if exists escolas;
 
-create database escola;
+create database escolas;
 
-use escola;
+use escolas;
 
 create table alunos (
 id int not null auto_increment,
@@ -326,15 +326,17 @@ select d.nome, a.nome, AVG(n.notas)from notas n inner join disciplinas d on n.di
 group by n.disciplinas_id, n.alunos_id having avg(n.notas) order by d.nome asc, n.notas desc;
 
 -- 27. Liste as 5 menores notas da disciplina de História, exibir o nome do aluno e a nota. 
-select d.nome, n.notas  from notas n inner join disciplinas d on n.disciplinas_id = d.id where d.nome = 'História'
+select a.nome ,d.nome, n.notas  from notas n inner join disciplinas d on n.disciplinas_id = d.id 
+inner join alunos a on n.alunos_id = a.id 
+where d.nome = 'História'
 order by d.nome, n.notas asc limit 5;
 
 -- 28. Liste as 3 maiores médias da disciplina de Química, exibir o nome do aluno e a média. 
-select a.nome, AVG(n.notas) from notas n inner join disciplinas d on n.disciplinas_id = d.id inner join alunos a on n.alunos_id = a.id 
-where d.nome = 'Química' group by n.alunos_id  having avg(n.notas) order by n.notas desc limit 3;
+select a.nome, d.nome , AVG(n.notas) as media from notas n inner join disciplinas d on n.disciplinas_id = d.id inner join alunos a on n.alunos_id = a.id 
+where d.nome = 'Química' group by n.alunos_id  having avg(n.notas) order by media desc limit 3;
 
 -- 29. Liste as 10 maiores médias, exibir nome da disciplina, nome do aluno e a média. Obs. Deve considerar todas as disciplinas. 
-select a.nome, d.nome,  AVG(n.notas) as nota_final from notas n 
+select a.nome as aluno, d.nome as disciplina,  AVG(n.notas) as nota_final from notas n 
 inner join disciplinas d on n.disciplinas_id = d.id 
 inner join alunos a on n.alunos_id = a.id 
 group by n.disciplinas_id, n.alunos_id having avg(n.notas) 

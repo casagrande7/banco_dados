@@ -470,7 +470,29 @@ select d.nome as disciplina, AVG(n.nota) as media from notas n inner join discip
 group by d.nome;
 
 -- Exercício 25
+select d.nome as disciplina, a.nome as alunos , AVG(n.nota) as media from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina 
+inner join alunos a on n.id_aluno = a.id_aluno group by disciplina, alunos having avg(n.nota) order by d.nome, a.nome asc;
 
+-- Exercício 26
+select d.nome as disciplina, a.nome as alunos , AVG(n.nota) as media from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina 
+inner join alunos a on n.id_aluno = a.id_aluno group by disciplina, alunos having avg(n.nota) order by d.nome asc, media desc;
+
+-- Exercício 27 
+select a.nome as aluno, d.nome as disciplina, n.nota from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina 
+inner join alunos a on n.id_aluno = a.id_aluno 
+where d.nome = 'História' order by d.nome, n.nota asc limit 5;
+
+-- Exercício 28
+select a.nome as aluno , d.nome as disciplina, AVG(n.nota) as media from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina 
+inner join alunos a on n.id_aluno = a.id_aluno 
+where d.nome = 'Química' group by aluno, disciplina order by media desc limit 3;
+
+-- Exercício 29
+select a.nome as aluno, d.nome as disciplina, AVG(n.nota)as media from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina 
+inner join alunos a on n.id_aluno = a.id_aluno group by aluno, disciplina order by media desc limit 10; 
+
+-- Exercício 30
+select count(distinct id_aluno) as total_alunos from matriculas m;
 
 
 
