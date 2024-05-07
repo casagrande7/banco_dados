@@ -77,8 +77,23 @@ delimiter ;
 
 select calcular_idade('2007-04-19');
 
+-- Procedure
+/*Procedimentos são conjuntos de instruções sql armazenadas no banco de dados. Eles podem aceitar parâmetros e executar uma série
+ * de comandos.*/
+delimiter //
+create procedure adicionaAluno(x_nome varchar(50), x_idade int)
+begin
+	insert into alunos(nome, idade) values (x_nome, x_idade);
+end//
+delimiter ;
 
+call adicionaAluno('Ana', 30); 
+select *from alunos a;
 
+-- Diferença entre Procedure e Function
+/* Function -> retorna um valor. Pode ser usado em expressão sql. Exemplo Select calculoMediaIadade();
+ * Procedure -> Não retorna um valor diretamente. Pode ter efeitos colaterais, como modificar dados no banco de dados 
+ * Exemplo: Call adicionaAluno('Ana', 30);*/
 
 
 
